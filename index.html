@@ -1,16 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Premium Anti-Aging Program</title>
     <style>
-        body { margin: 0; background-color: #fff; }
-        img { display: block; width: 100%; max-width: 800px; margin: 0 auto; }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        img {
+            display: block;
+            width: 100%;
+        }
+        .footer-banner {
+            background-color: #a32035;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer; /* 마우스를 올리면 손가락 모양으로 바뀜 */
+
+            /* --- 애니메이션 적용 부분 --- */
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+
+        /* --- 두근거리는 애니메이션 효과 정의 --- */
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1); /* 원래 크기 */
+            }
+            50% {
+                transform: scale(1.05); /* 5% 커짐 */
+                box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* 흰색 그림자로 반짝임 */
+            }
+            100% {
+                transform: scale(1); /* 원래 크기로 돌아옴 */
+            }
+        }
     </style>
 </head>
 <body>
-    <img src="01.jpg">
-    <img src="02.jpg">
-    <img src="03.jpg">
-    <img src="04.jpg">
+
+    <img src="01.jpg" alt="Premium Anti-Aging Program Image 1">
+    <img src="02.jpg" alt="Premium Anti-Aging Program Image 2">
+    <img src="03.jpg" alt="Premium Anti-Aging Program Image 3">
+    <img src="04.jpg" alt="Premium Anti-Aging Program Image 4">
+
+    <div class="footer-banner">
+        The regen 健康项目
+    </div>
+
 </body>
-</html>
+</html>```
