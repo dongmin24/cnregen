@@ -8,35 +8,44 @@
         body {
             margin: 0;
             padding: 0;
+            /* 중요: 마지막 이미지가 고정 배너에 가려지지 않도록 본문 아래에 공간을 만들어줍니다. */
+            padding-bottom: 80px;
         }
         img {
             display: block;
             width: 100%;
         }
         .footer-banner {
+            /* --- 여기가 핵심! 배너를 화면 하단에 고정시킵니다 --- */
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            /* ------------------------------------------- */
+
             background-color: #a32035;
             color: #ffffff;
             text-align: center;
             padding: 20px 10px;
             font-size: 16px;
             font-weight: bold;
-            cursor: pointer; /* 마우스를 올리면 손가락 모양으로 바뀜 */
+            cursor: pointer;
+            box-sizing: border-box; /* 패딩을 포함해서 크기를 계산하도록 설정 */
+            z-index: 100; /* 다른 요소들보다 항상 위에 보이도록 설정 */
 
-            /* --- 애니메이션 적용 부분 --- */
             animation: heartbeat 1.5s ease-in-out infinite;
         }
 
-        /* --- 두근거리는 애니메이션 효과 정의 --- */
         @keyframes heartbeat {
             0% {
-                transform: scale(1); /* 원래 크기 */
+                transform: scale(1);
             }
             50% {
-                transform: scale(1.05); /* 5% 커짐 */
-                box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* 흰색 그림자로 반짝임 */
+                transform: scale(1.05);
+                box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
             }
             100% {
-                transform: scale(1); /* 원래 크기로 돌아옴 */
+                transform: scale(1);
             }
         }
     </style>
@@ -48,9 +57,18 @@
     <img src="03.jpg" alt="Premium Anti-Aging Program Image 3">
     <img src="04.jpg" alt="Premium Anti-Aging Program Image 4">
 
+    <!-- 배너 텍스트를 대문자로 수정했습니다 -->
     <div class="footer-banner">
-        The regen 健康项目
+        THE REGEN 健康项目
     </div>
 
 </body>
 </html>```
+
+3.  페이지 맨 아래로 내려가서 초록색 **`Commit changes`** 버튼을 누르면 진짜 최종 완성입니다!
+
+---
+
+이제 1분 정도 기다린 후에 **`https://dongmin24.github.io/cnregen`** 주소로 다시 들어가서 확인해 보세요.
+
+스크롤을 아무리 내려도 두근거리는 배너가 화면 맨 아래에 착 달라붙어서 따라다닐 거예요
